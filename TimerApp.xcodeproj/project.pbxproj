@@ -11,12 +11,13 @@
 		085E9B7A26F79569007B38D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 085E9B7926F79569007B38D8 /* Assets.xcassets */; };
 		085E9B8026F79569007B38D8 /* TimerApp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 085E9B7F26F79569007B38D8 /* TimerApp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		085E9B8526F79569007B38D8 /* TimerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085E9B8426F79569007B38D8 /* TimerAppApp.swift */; };
-		085E9B8726F79569007B38D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085E9B8626F79569007B38D8 /* ContentView.swift */; };
+		085E9B8726F79569007B38D8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085E9B8626F79569007B38D8 /* MainView.swift */; };
 		085E9B8926F79569007B38D8 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085E9B8826F79569007B38D8 /* NotificationController.swift */; };
 		085E9B8B26F79569007B38D8 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085E9B8A26F79569007B38D8 /* NotificationView.swift */; };
 		085E9B8D26F79569007B38D8 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085E9B8C26F79569007B38D8 /* ComplicationController.swift */; };
 		085E9B8F26F7956A007B38D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 085E9B8E26F7956A007B38D8 /* Assets.xcassets */; };
 		085E9B9226F7956A007B38D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 085E9B9126F7956A007B38D8 /* Preview Assets.xcassets */; };
+		087F72C326F7E28D00D8E9D5 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087F72C226F7E28D00D8E9D5 /* TimerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +68,7 @@
 		085E9B7926F79569007B38D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		085E9B7F26F79569007B38D8 /* TimerApp WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TimerApp WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		085E9B8426F79569007B38D8 /* TimerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerAppApp.swift; sourceTree = "<group>"; };
-		085E9B8626F79569007B38D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		085E9B8626F79569007B38D8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		085E9B8826F79569007B38D8 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		085E9B8A26F79569007B38D8 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		085E9B8C26F79569007B38D8 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
@@ -75,6 +76,7 @@
 		085E9B9126F7956A007B38D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		085E9B9326F7956A007B38D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		085E9B9426F7956A007B38D8 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		087F72C226F7E28D00D8E9D5 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,10 +121,11 @@
 			isa = PBXGroup;
 			children = (
 				085E9B8426F79569007B38D8 /* TimerAppApp.swift */,
-				085E9B8626F79569007B38D8 /* ContentView.swift */,
+				085E9B8626F79569007B38D8 /* MainView.swift */,
 				085E9B8826F79569007B38D8 /* NotificationController.swift */,
 				085E9B8A26F79569007B38D8 /* NotificationView.swift */,
 				085E9B8C26F79569007B38D8 /* ComplicationController.swift */,
+				087F72C226F7E28D00D8E9D5 /* TimerView.swift */,
 				085E9B8E26F7956A007B38D8 /* Assets.xcassets */,
 				085E9B9326F7956A007B38D8 /* Info.plist */,
 				085E9B9426F7956A007B38D8 /* PushNotificationPayload.apns */,
@@ -266,8 +269,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				087F72C326F7E28D00D8E9D5 /* TimerView.swift in Sources */,
 				085E9B8926F79569007B38D8 /* NotificationController.swift in Sources */,
-				085E9B8726F79569007B38D8 /* ContentView.swift in Sources */,
+				085E9B8726F79569007B38D8 /* MainView.swift in Sources */,
 				085E9B8D26F79569007B38D8 /* ComplicationController.swift in Sources */,
 				085E9B8526F79569007B38D8 /* TimerAppApp.swift in Sources */,
 				085E9B8B26F79569007B38D8 /* NotificationView.swift in Sources */,
