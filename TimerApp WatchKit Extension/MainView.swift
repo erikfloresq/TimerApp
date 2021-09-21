@@ -27,7 +27,7 @@ struct MainView: View {
                     DigitPicker(title: "Seconds",
                                digits: (0...59),
                                timeSelected: $secondsSelected)
-                }.frame(height: 120, alignment: .center)
+                }.frame(height: 100, alignment: .center)
                 NavigationLink("Start") {
                     TimerView(hour: "\(hoursSelected)",
                               minutes: "\(minutesSelected)",
