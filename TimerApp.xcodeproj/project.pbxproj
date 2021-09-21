@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		085C1E3726F9D79B001B0949 /* DigitPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085C1E3626F9D79B001B0949 /* DigitPicker.swift */; };
+		085C1E3926F9D7AB001B0949 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085C1E3826F9D7AB001B0949 /* HeaderView.swift */; };
+		085C1E3B26F9D7BF001B0949 /* PickerBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085C1E3A26F9D7BF001B0949 /* PickerBody.swift */; };
 		085E9B7526F79568007B38D8 /* TimerApp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 085E9B7426F79568007B38D8 /* TimerApp WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		085E9B7A26F79569007B38D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 085E9B7926F79569007B38D8 /* Assets.xcassets */; };
 		085E9B8026F79569007B38D8 /* TimerApp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 085E9B7F26F79569007B38D8 /* TimerApp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -63,6 +66,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		085C1E3626F9D79B001B0949 /* DigitPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitPicker.swift; sourceTree = "<group>"; };
+		085C1E3826F9D7AB001B0949 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		085C1E3A26F9D7BF001B0949 /* PickerBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerBody.swift; sourceTree = "<group>"; };
 		085E9B7026F79568007B38D8 /* TimerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		085E9B7426F79568007B38D8 /* TimerApp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TimerApp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		085E9B7926F79569007B38D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -90,6 +96,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		085C1E3C26F9D7D3001B0949 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				085E9B8626F79569007B38D8 /* MainView.swift */,
+				085C1E3626F9D79B001B0949 /* DigitPicker.swift */,
+				085C1E3826F9D7AB001B0949 /* HeaderView.swift */,
+				085C1E3A26F9D7BF001B0949 /* PickerBody.swift */,
+				087F72C226F7E28D00D8E9D5 /* TimerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		085E9B6926F79568007B38D8 = {
 			isa = PBXGroup;
 			children = (
@@ -120,12 +138,11 @@
 		085E9B8326F79569007B38D8 /* TimerApp WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				085C1E3C26F9D7D3001B0949 /* Views */,
 				085E9B8426F79569007B38D8 /* TimerAppApp.swift */,
-				085E9B8626F79569007B38D8 /* MainView.swift */,
 				085E9B8826F79569007B38D8 /* NotificationController.swift */,
 				085E9B8A26F79569007B38D8 /* NotificationView.swift */,
 				085E9B8C26F79569007B38D8 /* ComplicationController.swift */,
-				087F72C226F7E28D00D8E9D5 /* TimerView.swift */,
 				085E9B8E26F7956A007B38D8 /* Assets.xcassets */,
 				085E9B9326F7956A007B38D8 /* Info.plist */,
 				085E9B9426F7956A007B38D8 /* PushNotificationPayload.apns */,
@@ -273,8 +290,11 @@
 				085E9B8926F79569007B38D8 /* NotificationController.swift in Sources */,
 				085E9B8726F79569007B38D8 /* MainView.swift in Sources */,
 				085E9B8D26F79569007B38D8 /* ComplicationController.swift in Sources */,
+				085C1E3726F9D79B001B0949 /* DigitPicker.swift in Sources */,
 				085E9B8526F79569007B38D8 /* TimerAppApp.swift in Sources */,
 				085E9B8B26F79569007B38D8 /* NotificationView.swift in Sources */,
+				085C1E3B26F9D7BF001B0949 /* PickerBody.swift in Sources */,
+				085C1E3926F9D7AB001B0949 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

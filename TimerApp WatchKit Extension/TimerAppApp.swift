@@ -12,7 +12,8 @@ struct TimerAppApp: App {
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
-                MainView()
+                //MainView()
+                TimerView(customTimer: CustomTimer(timeLimit: 120.0))
             }
         }
 

@@ -29,54 +29,15 @@ struct MainView: View {
                                timeSelected: $secondsSelected)
                 }.frame(height: 100, alignment: .center)
                 NavigationLink("Start") {
-                    TimerView(hour: "\(hoursSelected)",
-                              minutes: "\(minutesSelected)",
-                              seconds: "\(secondsSelected)")
+//                    TimerView(hour: "\(hoursSelected)",
+//                              minutes: "\(minutesSelected)",
+//                              seconds: "\(secondsSelected)")
                 }
             }
         }
     }
 }
 
-struct DigitPicker: View {
-    var title: String
-    var digits: ClosedRange<Int>
-    @Binding var timeSelected: Int
-
-    var body: some View {
-        Picker(selection: $timeSelected) {
-            PickerBody(data: digits)
-        } label: {
-            HeaderView(title: title)
-        }.pickerStyle(.wheel)
-    }
-}
-
-struct HeaderView: View {
-    var title: String
-
-    var body: some View {
-        Text(title)
-            .font(.system(size: 11).bold())
-            .padding(3)
-            .background(Color.green)
-            .cornerRadius(5)
-    }
-}
-
-struct PickerBody: View {
-    var data: ClosedRange<Int>
-
-    var body: some View {
-        ForEach(data, id: \.self) { item in
-            if item < 10 {
-                Text("0\(item)").tag(item)
-            } else {
-                Text("\(item)").tag(item)
-            }
-        }
-    }
-}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
