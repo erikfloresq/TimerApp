@@ -7,31 +7,34 @@
 
 import SwiftUI
 
+class FinishTime: ObservableObject {
+    var hour: Int = 0
+    var minute: Int = 0
+    var seconds: Int = 0
+}
+
 struct MainView: View {
-    @State var hoursSelected: Int = 0
-    @State var minutesSelected: Int = 0
-    @State var secondsSelected: Int = 0
+    @StateObject var finishTime: FinishTime = FinishTime()
+    let viewModel: MainViewModel = MainViewModel()
 
     var body: some View {
         NavigationView {
             VStack(spacing: 10) {
                 HStack {
                     DigitPicker(title: "Hours",
-                               digits: (0...23),
-                               timeSelected: $hoursSelected)
+                                digits: (0...23),
+                                timeSelected: $finishTime.hour)
                     Text(":")
                     DigitPicker(title: "Minutes",
-                               digits: (1...59),
-                               timeSelected: $minutesSelected)
+                                digits: (1...59),
+                                timeSelected: $finishTime.minute)
                     Text(":")
                     DigitPicker(title: "Seconds",
-                               digits: (0...59),
-                               timeSelected: $secondsSelected)
+                                digits: (0...59),
+                                timeSelected: $finishTime.seconds)
                 }.frame(height: 100, alignment: .center)
                 NavigationLink("Start") {
-//                    TimerView(hour: "\(hoursSelected)",
-//                              minutes: "\(minutesSelected)",
-//                              seconds: "\(secondsSelected)")
+                    TimerView(timeFinishInSeconds: viewModel.getSeconds(from: finishTime))
                 }
             }
         }

@@ -10,6 +10,8 @@
 		085C1E3726F9D79B001B0949 /* DigitPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085C1E3626F9D79B001B0949 /* DigitPicker.swift */; };
 		085C1E3926F9D7AB001B0949 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085C1E3826F9D7AB001B0949 /* HeaderView.swift */; };
 		085C1E3B26F9D7BF001B0949 /* PickerBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085C1E3A26F9D7BF001B0949 /* PickerBody.swift */; };
+		085C1E3E26FB4144001B0949 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085C1E3D26FB4144001B0949 /* MainViewModel.swift */; };
+		085C1E5326FB435A001B0949 /* TimerApp_WatchKit_ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085C1E5226FB435A001B0949 /* TimerApp_WatchKit_ExtensionTests.swift */; };
 		085E9B7526F79568007B38D8 /* TimerApp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 085E9B7426F79568007B38D8 /* TimerApp WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		085E9B7A26F79569007B38D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 085E9B7926F79569007B38D8 /* Assets.xcassets */; };
 		085E9B8026F79569007B38D8 /* TimerApp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 085E9B7F26F79569007B38D8 /* TimerApp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -21,9 +23,17 @@
 		085E9B8F26F7956A007B38D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 085E9B8E26F7956A007B38D8 /* Assets.xcassets */; };
 		085E9B9226F7956A007B38D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 085E9B9126F7956A007B38D8 /* Preview Assets.xcassets */; };
 		087F72C326F7E28D00D8E9D5 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087F72C226F7E28D00D8E9D5 /* TimerView.swift */; };
+		08E6AE7E26FB4AAE0089BE4A /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E6AE7D26FB4AAE0089BE4A /* TimerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		085C1E5426FB435A001B0949 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 085E9B6A26F79568007B38D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 085E9B7E26F79569007B38D8;
+			remoteInfo = "TimerApp WatchKit Extension";
+		};
 		085E9B7626F79568007B38D8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 085E9B6A26F79568007B38D8 /* Project object */;
@@ -69,6 +79,9 @@
 		085C1E3626F9D79B001B0949 /* DigitPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitPicker.swift; sourceTree = "<group>"; };
 		085C1E3826F9D7AB001B0949 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		085C1E3A26F9D7BF001B0949 /* PickerBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerBody.swift; sourceTree = "<group>"; };
+		085C1E3D26FB4144001B0949 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		085C1E5026FB435A001B0949 /* TimerApp WatchKit ExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TimerApp WatchKit ExtensionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		085C1E5226FB435A001B0949 /* TimerApp_WatchKit_ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerApp_WatchKit_ExtensionTests.swift; sourceTree = "<group>"; };
 		085E9B7026F79568007B38D8 /* TimerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		085E9B7426F79568007B38D8 /* TimerApp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TimerApp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		085E9B7926F79569007B38D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,9 +96,17 @@
 		085E9B9326F7956A007B38D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		085E9B9426F7956A007B38D8 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		087F72C226F7E28D00D8E9D5 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		08E6AE7D26FB4AAE0089BE4A /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		085C1E4D26FB435A001B0949 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		085E9B7C26F79569007B38D8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -104,8 +125,18 @@
 				085C1E3826F9D7AB001B0949 /* HeaderView.swift */,
 				085C1E3A26F9D7BF001B0949 /* PickerBody.swift */,
 				087F72C226F7E28D00D8E9D5 /* TimerView.swift */,
+				085C1E3D26FB4144001B0949 /* MainViewModel.swift */,
+				08E6AE7D26FB4AAE0089BE4A /* TimerViewModel.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		085C1E5126FB435A001B0949 /* TimerApp WatchKit ExtensionTests */ = {
+			isa = PBXGroup;
+			children = (
+				085C1E5226FB435A001B0949 /* TimerApp_WatchKit_ExtensionTests.swift */,
+			);
+			path = "TimerApp WatchKit ExtensionTests";
 			sourceTree = "<group>";
 		};
 		085E9B6926F79568007B38D8 = {
@@ -113,6 +144,7 @@
 			children = (
 				085E9B7826F79568007B38D8 /* TimerApp WatchKit App */,
 				085E9B8326F79569007B38D8 /* TimerApp WatchKit Extension */,
+				085C1E5126FB435A001B0949 /* TimerApp WatchKit ExtensionTests */,
 				085E9B7126F79568007B38D8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -123,6 +155,7 @@
 				085E9B7026F79568007B38D8 /* TimerApp.app */,
 				085E9B7426F79568007B38D8 /* TimerApp WatchKit App.app */,
 				085E9B7F26F79569007B38D8 /* TimerApp WatchKit Extension.appex */,
+				085C1E5026FB435A001B0949 /* TimerApp WatchKit ExtensionTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -162,6 +195,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		085C1E4F26FB435A001B0949 /* TimerApp WatchKit ExtensionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 085C1E5626FB435A001B0949 /* Build configuration list for PBXNativeTarget "TimerApp WatchKit ExtensionTests" */;
+			buildPhases = (
+				085C1E4C26FB435A001B0949 /* Sources */,
+				085C1E4D26FB435A001B0949 /* Frameworks */,
+				085C1E4E26FB435A001B0949 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				085C1E5526FB435A001B0949 /* PBXTargetDependency */,
+			);
+			name = "TimerApp WatchKit ExtensionTests";
+			productName = "TimerApp WatchKit ExtensionTests";
+			productReference = 085C1E5026FB435A001B0949 /* TimerApp WatchKit ExtensionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		085E9B6F26F79568007B38D8 /* TimerApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 085E9B9F26F7956A007B38D8 /* Build configuration list for PBXNativeTarget "TimerApp" */;
@@ -223,6 +274,10 @@
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
+					085C1E4F26FB435A001B0949 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 085E9B7E26F79569007B38D8;
+					};
 					085E9B6F26F79568007B38D8 = {
 						CreatedOnToolsVersion = 13.0;
 					};
@@ -250,11 +305,19 @@
 				085E9B6F26F79568007B38D8 /* TimerApp */,
 				085E9B7326F79568007B38D8 /* TimerApp WatchKit App */,
 				085E9B7E26F79569007B38D8 /* TimerApp WatchKit Extension */,
+				085C1E4F26FB435A001B0949 /* TimerApp WatchKit ExtensionTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		085C1E4E26FB435A001B0949 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		085E9B6E26F79568007B38D8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -282,6 +345,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		085C1E4C26FB435A001B0949 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				085C1E5326FB435A001B0949 /* TimerApp_WatchKit_ExtensionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		085E9B7B26F79569007B38D8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -294,6 +365,8 @@
 				085E9B8526F79569007B38D8 /* TimerAppApp.swift in Sources */,
 				085E9B8B26F79569007B38D8 /* NotificationView.swift in Sources */,
 				085C1E3B26F9D7BF001B0949 /* PickerBody.swift in Sources */,
+				08E6AE7E26FB4AAE0089BE4A /* TimerViewModel.swift in Sources */,
+				085C1E3E26FB4144001B0949 /* MainViewModel.swift in Sources */,
 				085C1E3926F9D7AB001B0949 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +374,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		085C1E5526FB435A001B0949 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 085E9B7E26F79569007B38D8 /* TimerApp WatchKit Extension */;
+			targetProxy = 085C1E5426FB435A001B0949 /* PBXContainerItemProxy */;
+		};
 		085E9B7726F79568007B38D8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 085E9B7326F79568007B38D8 /* TimerApp WatchKit App */;
@@ -314,6 +392,56 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		085C1E5726FB435A001B0949 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CPX7FN2K89;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.erikflores.TimerApp-WatchKit-ExtensionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimerApp WatchKit Extension.appex/TimerApp WatchKit Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Debug;
+		};
+		085C1E5826FB435A001B0949 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CPX7FN2K89;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.erikflores.TimerApp-WatchKit-ExtensionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimerApp WatchKit Extension.appex/TimerApp WatchKit Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Release;
+		};
 		085E9B9526F7956A007B38D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -571,6 +699,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		085C1E5626FB435A001B0949 /* Build configuration list for PBXNativeTarget "TimerApp WatchKit ExtensionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				085C1E5726FB435A001B0949 /* Debug */,
+				085C1E5826FB435A001B0949 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		085E9B6D26F79568007B38D8 /* Build configuration list for PBXProject "TimerApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
