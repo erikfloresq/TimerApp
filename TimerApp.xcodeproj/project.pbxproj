@@ -97,6 +97,7 @@
 		085E9B9426F7956A007B38D8 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		087F72C226F7E28D00D8E9D5 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		08E6AE7D26FB4AAE0089BE4A /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
+		08FC3B7226FCA3D7004CAAD6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +143,7 @@
 		085E9B6926F79568007B38D8 = {
 			isa = PBXGroup;
 			children = (
+				08FC3B7226FCA3D7004CAAD6 /* README.md */,
 				085E9B7826F79568007B38D8 /* TimerApp WatchKit App */,
 				085E9B8326F79569007B38D8 /* TimerApp WatchKit Extension */,
 				085C1E5126FB435A001B0949 /* TimerApp WatchKit ExtensionTests */,
