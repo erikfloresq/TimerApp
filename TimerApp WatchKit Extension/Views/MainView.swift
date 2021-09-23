@@ -8,9 +8,9 @@
 import SwiftUI
 
 class FinishTime: ObservableObject {
-    var hour: Int = 0
-    var minute: Int = 0
-    var seconds: Int = 0
+    @Published var hour: Int = 0
+    @Published var minute: Int = 0
+    @Published var seconds: Int = 0
 }
 
 struct MainView: View {

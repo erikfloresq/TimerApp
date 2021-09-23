@@ -11,11 +11,11 @@ struct TimerView: View {
     @Environment(\.presentationMode) var presentationMode
     let timer = Timer.publish(every: 1.0,
                               on: .current,
-                              in: .common).autoconnect()
+                              in: .common)
     let timeFinishInSeconds: Int
     let timerViewModel = TimerViewModel()
     @State private var currentTime: String
-    @State private var count: CGFloat
+    @State private var count: CGFloat = 0
 
     init(timeFinishInSeconds: Int) {
         self.timeFinishInSeconds = timeFinishInSeconds
@@ -36,9 +36,13 @@ struct TimerView: View {
             }
             .background(.red)
             .cornerRadius(10)
-        }.onReceive(timer) { time in
+        }
+        .onAppear {
+            timer.connect()
+        }
+        .onReceive(timer) { time in
             if count == 0 {
-                timer.upstream.connect().cancel()
+                timer.connect().cancel()
             } else {
                 currentTime = timerViewModel.timeString(time: count)
                 self.count = count - 1
