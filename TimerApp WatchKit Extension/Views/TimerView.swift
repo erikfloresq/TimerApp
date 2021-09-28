@@ -30,6 +30,7 @@ struct TimerView: View {
                 Text("\(currentTime)")
             }.font(.system(size: 40))
             Button {
+                timer.connect().cancel()
                 self.presentationMode.wrappedValue.dismiss()
             } label: {
                 Text("Cancel")

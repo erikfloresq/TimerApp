@@ -26,7 +26,7 @@ struct MainView: View {
                                 timeSelected: $finishTime.hour)
                     Text(":")
                     DigitPicker(title: "Minutes",
-                                digits: (1...59),
+                                digits: (0...59),
                                 timeSelected: $finishTime.minute)
                     Text(":")
                     DigitPicker(title: "Seconds",
@@ -35,7 +35,7 @@ struct MainView: View {
                 }.frame(height: 100, alignment: .center)
                 NavigationLink("Start") {
                     TimerView(timeFinishInSeconds: viewModel.getSeconds(from: finishTime))
-                }
+                }.disabled((finishTime.hour == 0 && finishTime.minute == 0 &&  finishTime.seconds == 0) ? true : false )
             }
         }
     }
