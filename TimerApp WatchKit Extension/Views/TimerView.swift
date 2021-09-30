@@ -9,13 +9,13 @@ import SwiftUI
 
 struct TimerView: View {
     @Environment(\.presentationMode) var presentationMode
-    let timer = Timer.publish(every: 1.0,
-                              on: .current,
-                              in: .common)
     let timeFinishInSeconds: Int
     let timerViewModel = TimerViewModel()
     @State private var currentTime: String
     @State private var count: CGFloat = 0
+    @State var timer = Timer.publish(every: 1.0,
+                              on: .main,
+                              in: .common).autoconnect()
 
     init(timeFinishInSeconds: Int) {
         self.timeFinishInSeconds = timeFinishInSeconds
@@ -25,12 +25,30 @@ struct TimerView: View {
     }
 
     var body: some View {
+        Group {
+            if count == 0 {
+                finishView()
+            } else {
+                timerView()
+            }
+        }
+        .onReceive(timer) { time in
+            currentTime = timerViewModel.timeString(time: count)
+            if count == 0 {
+                self.timer.upstream.connect().cancel()
+            } else {
+                self.count = count - 1
+            }
+        }
+    }
+
+    func timerView() -> some View {
         VStack(spacing: 20) {
             HStack {
                 Text("\(currentTime)")
             }.font(.system(size: 40))
             Button {
-                timer.connect().cancel()
+                self.timer.upstream.connect().cancel()
                 self.presentationMode.wrappedValue.dismiss()
             } label: {
                 Text("Cancel")
@@ -38,16 +56,18 @@ struct TimerView: View {
             .background(.red)
             .cornerRadius(10)
         }
-        .onAppear {
-            timer.connect()
-        }
-        .onReceive(timer) { time in
-            if count == 0 {
-                timer.connect().cancel()
-            } else {
-                currentTime = timerViewModel.timeString(time: count)
-                self.count = count - 1
+    }
+
+    func finishView() -> some View {
+        VStack(spacing: 20) {
+            Text("Finish!").font(.system(size: 40))
+            Button {
+                self.presentationMode.wrappedValue.dismiss()
+            } label: {
+                Text("Done")
             }
+            .background(.green)
+            .cornerRadius(10)
         }
     }
 }
